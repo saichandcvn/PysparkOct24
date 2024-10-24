@@ -1,6 +1,5 @@
 import os
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import col, when, avg
 
 os.environ["PYSPARK_PYTHON"] = "C:/Users/cvnsa/Documents/Python/Python37/python.exe"
 
