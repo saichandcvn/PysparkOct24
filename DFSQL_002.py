@@ -1,6 +1,5 @@
 import os
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import *
 
 os.environ["PYSPARK_PYTHON"] = "C:/Users/cvnsa/Documents/Python/Python37/python.exe"
 spark = SparkSession.builder.appName("PySparkProgram").master("local[*]").getOrCreate()
@@ -28,4 +27,3 @@ datediff(current_date(), last_checkin) as datadiff,
 (case when datediff(current_date(), last_checkin) < 7 then "Active" else "Inactive" end) as workstatus
 from employees
 """).show()
-
